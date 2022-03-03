@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/// <summary>
+/// Classe responsavel pelo controle dos botoes do jogo
+/// </summary>
 public class ManageButtons : MonoBehaviour
 {
-    /// <summary>
-    /// esse classe seria o responsavel pelo controle dos botoes da jogo
-    /// </summary>
     
     // Start is called before the first frame update
     void Start()

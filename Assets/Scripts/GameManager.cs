@@ -4,12 +4,12 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+/// <summary>
+/// classe principal do jogo
+/// controla a lÃ³gica e regras do jogo
+/// </summary>
 public class GameManager : MonoBehaviour
 {
-    /// <summary>
-    /// classe principal do jogo
-    /// onde ela controla 
-    /// </summary>
     private int numberAttempts;
     private int maxAttempts;
     private int score;
@@ -57,13 +57,14 @@ public class GameManager : MonoBehaviour
     
     void InitGame() 
     {
-        hiddenWord = RandomWord(); //pegando palavra a partir de uma função
+        hiddenWord = RandomWord(); //pegando palavra a partir de uma funcao
         hiddenWord = hiddenWord.ToUpper();      //transforma-se a palavra el maiuscula
         hiddenWordLength = hiddenWord.Length;   //determina o quantidade das letras da palavra
         foundLetters = new bool[hiddenWordLength+1];//instancia-se o array bool do indicador de letras acertos
         hiddenLetters = hiddenWord.ToCharArray(); // copia-se a palavra no array de letras
     }
 
+    // Verifica se alguma tecla foi pressionada
     void CheckKeyBoard()
     {
         if(Input.anyKeyDown)
@@ -100,7 +101,7 @@ public class GameManager : MonoBehaviour
             }
         }
     }
-    //carrga som de acordo se o jogador acertar ou não a tecla
+    //carrga som de acordo se o jogador acertar ou nao a tecla
     private void EfeitoPosTentativa(bool letraEncontrada)
     {
         if (letraEncontrada)
@@ -135,11 +136,11 @@ public class GameManager : MonoBehaviour
     //Altera Score do jogador
     private void UpdateScoreUI()
     {
-        GameObject.Find("scoreUI").GetComponent<Text>().text = "Pontuação: " + score;
+        GameObject.Find("scoreUI").GetComponent<Text>().text = "Pontuaï¿½ï¿½o: " + score;
     }
     /*importando um arquivo texto
      * onde esta armazenada nossas palavras do jogo 
-     * respeitando que deve ter um delimitador de um espaço (' ') para separar as palavras
+     * respeitando que deve ter um delimitador de um eapco (' ') para separar as palavras
      */
     string[] PegaListaDePalavrasDoArquivo()
     {

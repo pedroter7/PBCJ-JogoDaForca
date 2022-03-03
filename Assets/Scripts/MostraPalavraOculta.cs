@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// esse classse seria o responsavel por alterar o texto do objeto 'ultimaPalavraOculta' com a palavra
+/// que foi descuberta
+/// </summary>
 public class MostraPalavraOculta : MonoBehaviour
 {
-    /// <summary>
-    /// esse classse seria o responsavel por alterar o texto do objeto 'ultimaPalavraOculta' com a palavra
-    /// que foi descuberta
-    /// </summary>
 
     // Start is called before the first frame update
     void Start()
