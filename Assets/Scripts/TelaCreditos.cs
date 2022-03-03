@@ -12,16 +12,23 @@ public class TelaCreditos : MonoBehaviour
 
     public float speed;//variavel indica a velocidade da transformacao da posicao 
     public int fps;////variavel indica a taxa de atualizacao da minha tela
+    public int fpsDelay; // Frames para esperar antes de comecar a rodar os creditos
+    private int fpsDelayed = 0; // controlador dos frames ja esperados
     Vector3 posicao;
     // Start is called before the first frame update
     private void Start()
     {
         QualitySettings.vSyncCount = 0; //O numero de VSyncs que devem passar entre cada quadro
-        Application.targetFrameRate = fps; //limitando os fps a minha tela
+        Application.targetFrameRate = fps; //trava o FPS do jogo
     }
     void Update()
     {
-        LoadCreditos();
+        // Se ja foram esperados os frames de delay para rodar os creditos entao roda os creditos
+        if (fpsDelayed > fpsDelay) {
+            LoadCreditos();
+        } else {
+            fpsDelayed++;
+        }
     }
     
     /*Metedo LoadCreditos() sera o responsavel para mudar posicao do meu objeto no eixo Y
