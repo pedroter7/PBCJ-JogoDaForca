@@ -482,7 +482,7 @@ GameObject:
   - component: {fileID: 1907886003}
   - component: {fileID: 1907886005}
   m_Layer: 5
-  m_Name: alunos
+  m_Name: textoCreditos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -504,7 +504,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -200, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1907886003
@@ -534,14 +534,17 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 2
     m_MaxSize: 50
-    m_Alignment: 3
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "Mohammad Massoud \t\tRA:11201921292\nPedro Tersetti Freidinger \tRA:11201810093\nSamuel
-    Brito da Silva        RA:11201810515"
+  m_Text: "Autores:\n\nMohammad Massoud    RA:11201921292\nPedro Tersetti Freidinger   
+    RA:11201810093\nSamuel Brito da Silva    RA:11201810515\n\nAssets de M\xFAsica:\n\nyoutube.com/watch?v=UpkC0vMxdDU
+    - tela de salvo\nyoutube.com/watch?v=NxSj2T2vx7M - tela de enforcado\nyoutube.com/watch?v=W2thmrHpuzQ
+    - tela inicial\nyoutube.com/watch?v=xy_NKN75Jhw - tela de cr\xE9ditos\n\nMuito
+    obrigado por jogar! :D"
 --- !u!222 &1907886004
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -563,4 +566,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  fps: 60
+  fps: 30
+  fpsDelay: 120
