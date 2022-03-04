@@ -39,9 +39,9 @@ public class TelaCreditos : MonoBehaviour
     {        
         posicao = new Vector3(transform.position.x , transform.position.y + speed, transform.position.z) ;
         transform.position = posicao;
-        if (transform.position.y >= 1000)
+        if (transform.position.y >= Screen.height)
         {
-            posicao = new Vector3(transform.position.x, transform.position.y - 1000, transform.position.z);
+            posicao = new Vector3(transform.position.x, transform.position.y - Screen.height, transform.position.z);
             transform.position = posicao;
         }        
     }
